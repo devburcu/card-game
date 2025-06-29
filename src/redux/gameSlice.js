@@ -22,6 +22,7 @@ const initialState = {
   gameCompleted: false,
   startTime: null,
   elapsedTime: 0,  // Oyun süresi (saniye)
+  score: 0,
 };
 
 const gameSlice = createSlice({
@@ -43,6 +44,7 @@ const gameSlice = createSlice({
       state.gameCompleted = false;
       state.startTime = Date.now();
       state.elapsedTime = 0;
+      state.score = 0;
     },
     flipCard(state, action) {
       const cardId = action.payload;
@@ -64,6 +66,7 @@ const gameSlice = createSlice({
             secondCard.complete = true;
             state.matchedCount += 1;
             state.openedCards = [];
+            state.score += 50;
 
             if (state.matchedCount === baseFrameworks.length) {
               state.gameCompleted = true;
@@ -84,6 +87,7 @@ const gameSlice = createSlice({
           if (firstCard.name !== secondCard.name) {
             firstCard.close = true;
             secondCard.close = true;
+            state.score -= 10;
           }
         }
         state.openedCards = [];

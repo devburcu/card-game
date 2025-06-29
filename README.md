@@ -12,6 +12,10 @@ Bu proje, JavaScript kütüphaneleri ve araçlarının logolarını içeren eğl
 
 - Oyun bittiğinde süre gösterilir.
 
+- Puanlama sistemi
+  - Doğru eşleşmede **+50 puan**
+  - Hatalı eşleşmede **–10 puan**
+
 - Responsive tasarım: mobil cihazlarda da oynanabilir.
 
 - Başlangıçta "Başla" butonu, oyun tamamlandığında "Tekrar Başla" butonu görünür.
@@ -39,6 +43,7 @@ src/
 │   ├── Card.jsx
 │   ├── GameBoard.jsx
 │   ├── GameControls.jsx
+│   ├── ScoreBoard.jsx
 │   ├── Timer.jsx
 ├── redux/
 │   ├── gameSlice.js
@@ -80,3 +85,4 @@ npm run dev
 
 ![Ekran Görüntüsü](./src/assets/StartScreen.png)
 ![Ekran Görüntüsü](./src/assets/CardScreen.png)
+![Ekran Görüntüsü](./src/assets/ScoreScreen.png)
